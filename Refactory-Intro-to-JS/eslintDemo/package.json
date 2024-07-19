@@ -1,0 +1,14 @@
+{
+  "name": "eslintdemo",
+  "version": "1.0.0",
+  "description": "ESLint Class Demo",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Patricia Rhoda Nekesa",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^7.10.0"
+  }
+}

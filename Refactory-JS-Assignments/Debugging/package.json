@@ -1,0 +1,11 @@
+{
+  "name": "eslint",
+  "version": "1.0.0",
+  "description": "Eslint to help in debugging in this folder/file",
+  "main": "eslint.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "kesa",
+  "license": "ISC"
+}

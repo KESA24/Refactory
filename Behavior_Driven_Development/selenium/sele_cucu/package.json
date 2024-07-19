@@ -1,0 +1,19 @@
+{
+  "name": "sele_cucu",
+  "version": "1.0.0",
+  "description": "selenium and cucumber",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/.bin/cucumber-js"
+  },
+  "author": "kesa",
+  "license": "ISC",
+  "devDependencies": {
+    "cucumber": "^6.0.5"
+  },
+  "dependencies": {
+    "assert": "^2.0.0",
+    "operadriver": "^1.0.0",
+    "selenium-webdriver": "^4.0.0-beta.1"
+  }
+}

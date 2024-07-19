@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TV</title>
+    <link rel="stylesheet" href="tv.css">
+</head>
+<body>
+    <div id="container">
+        <div id="monitor">
+          <div id="monitorscreen">
+            <div>
+                <img v-bind:src="image" v-if="signal" >
+                
+                <img v-else >
+                    
+              </div>
+          </div>
+          <button v-on:click="toggle">
+              on/off
+          </button>
+        </div>
+      </div>
+</body>
+<script src="vue.js">
+</script>
+<script src="custom.js">
+</script>
+</html>

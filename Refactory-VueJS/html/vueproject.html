@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <div id="root">
+        <div><b>{{title}}</b></div>
+        <hr/>
+        <ul>
+            <li>
+                {{student}}
+            </li>
+        </ul>
+        <button v-on:click="greetKesa">Greet Kesa</button>
+    </div> -->
+
+        <!-- <div id="root">
+            <div><b>{{title}}</b></div>
+            <hr/>
+            <div>
+                <ol>
+                   <li v-for="item in items">
+                       {{item}}
+                   </li> 
+                </ol>
+            </div>
+            <div>
+                can be changed to v-if , v-if ^& v-else-->
+                <!-- <h1 v-show ="signal">on</h1> 
+                <h2 v-show ="!signal">off</h2>
+            </div>
+     
+        <button v-on:click="toggle">
+            toggle
+        </button>
+        <img v-bind:src="imageSource" alt="" width="100px", height="100px">
+    </div> -->
+
+    <div id="root">
+    <div><b>{{title}}</b></div>
+    <hr/>
+        <ol>
+            <li v-for="student in students">
+                {{student}}
+            </li> 
+        </ol>
+        <hr/>
+
+        <div>
+            <label>
+                Student to be Added: {{studentToBeAdded}}
+            </label>
+        </div>
+
+        <div>
+            <input v-model="studentToBeAdded" type="text">
+            <button v-on:click="addStudent">Add Student</button>
+        </div>
+    </div>
+    <script src="../js/vue.js"></script>
+    <script src="../js/custom.js"></script>
+</body>
+</html>

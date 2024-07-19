@@ -1,0 +1,11 @@
+language: node_js
+
+node_js:
+  - "stable"
+cache: npm
+
+
+# Below is same as cache:npm
+# cache:
+#   directories:
+#     - node_modules

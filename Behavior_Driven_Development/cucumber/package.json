@@ -1,0 +1,14 @@
+{
+  "name": "practicals",
+  "version": "1.0.0",
+  "description": "BDD",
+  "main": "index.js",
+  "scripts": {
+    "test": "cucumber-js test"
+  },
+  "author": "the_agritect",
+  "license": "ISC",
+  "dependencies": {
+    "@cucumber/cucumber": "^7.0.0"
+  }
+}

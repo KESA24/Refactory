@@ -1,0 +1,31 @@
+* {
+  background-color: lightyellow;
+}
+.odd {
+  color: magenta;
+  font-size: large;
+}
+.even {
+  color: mediumspringgreen;
+}
+p {
+  color: brown;
+  text-align: center;
+}
+h1 {
+  color: cadetblue;
+}
+#kesa {
+  color: darkblue;
+}
+.iron {
+  text-align: right;
+  font-size: 7px;
+  color: green;
+}
+h2.iron {
+  font-size: 15px;
+}
+#firstparagraph {
+  font-size: 20px;
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/tv.css">
+</head>
+<body>
+    <div class="container tele">
+        <div class="antenna-left">
+            <div class="antenna-right">
+                <div id="root">
+                    <div class="screen">
+                        <img v-bind:src="img" alt="" height="150px" width="150px" class="rotate">
+                    </div>
+                    <div class="bottom">
+                        <h1 v-if="signal">
+                            on
+                        </h1>
+                         <h2 v-if="!signal">
+                            off
+                        </h2>
+                    <button v-on:click='toggle'>Power</button>
+                    </div>
+                    
+                </div>
+                <div class="base"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/vue.js"></script>
+    <script src="../js/tv.js"></script>
+</body>
+</html>
