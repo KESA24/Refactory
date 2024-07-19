@@ -1,0 +1,101 @@
+meta(charset="UTF-8")
+meta(name="viewport", content="width=device-width,initial-scale=1")
+link(rel="icon" href="images/favicon.jpg")
+link(rel="stylesheet", href="/css/registration.css")
+title Produce Registration
+.container
+  .header
+    h2 Produce Registration
+  form.form#produceform(method="POST" action="/uproduce" enctype="multipart/form-data" onSubmit='return checkInput()' autocomplete="off" )
+    .form-row
+      .form-group.col-md-6
+        label(for="pname") Name of Produce
+        input#pname(name="pname", type="text")
+        i.fas.fa-check-circle
+        i.fas.fa-exclamation-circle
+        small Error Message
+      .form-group.col-md-6
+        label(for="Ward") Ward Name
+        select#ward(name="ward")
+          option(value="Ward 1") Ward 1
+          option(value="Ward 2") Ward 2
+          option(value="Ward 3") Ward 3
+          option(value="Ward 4") Ward 4
+        i.fas.fa-check-circle
+        i.fas.fa-exclamation-circle
+        small Error Message
+    .form-row
+      .form-group.col-md-6
+        label(for="dor") Date Of Registration
+        input#dor(name="dateOfRegistration", type="date")
+        i.fas.fa-check-circle
+        i.fas.fa-exclamation-circle
+        small Error Message
+      .form-group.col-md-6
+        label(for="price") Unit Price(UGX)
+        input#price(name="price", type="number")
+        i.fas.fa-check-circle
+        i.fas.fa-exclamation-circle
+        small Error Message
+    .form-row
+      .form-group.col-md-6
+        label(for="qty") Quantity
+        input#pquantity(name="pquantity", type="number")
+        i.fas.fa-check-circle
+        i.fas.fa-exclamation-circle
+        small Error Message
+      .form-group.col-md-6
+        label(for="directions") Directions
+        input#dir(name="directions", type="text", placeholder="Directions to farm")
+        i.fas.fa-check-circle
+        i.fas.fa-exclamation-circle
+        small Error Message
+    .form-row
+      .form-group.col-md-6
+        label(for="modeOfPayment") Mode of Payment
+        select#mop(name="modeOfPayment")
+          option(value="Mode of Payment") Mode Of Payment
+          option(value="Cash") Cash
+          option(value="Mobile Money") Mobile Money
+        i.fas.fa-check-circle
+        i.fas.fa-exclamation-circle
+        small Error Message
+      .form-group.col-md-6
+        label(for="modeOfDelivery") Mode of Delivery
+        select#mod(name="modeOfDelivery")
+          option(value="Mode of Delivery") Mode Of Delivery
+          option(value="Pickup") Pickup
+          option(value="Home Delivery") Home Delivery
+        i.fas.fa-check-circle
+        i.fas.fa-exclamation-circle
+        small Error Message
+    .form-row
+      .form-group.col-md-6
+        label(for="produceType") Produce Type
+        select#ptype(name="produceType")
+          option(value="Produce Type") Produce Type
+          option(value="Organic") Organic
+          option(value="Non Organic") Non Organic
+        i.fas.fa-check-circle
+        i.fas.fa-exclamation-circle
+        small Error Message
+      .form-group.col-md-6
+        label(for="image") Upload Picture
+        input.file#image(name="pImage", type="file")
+        i.fas.fa-check-circle
+        i.fas.fa-exclamation-circle
+        small Error Message
+      button(type="submit") Register
+    .form-row
+      .form-group.col-md-6
+        label(for="status") 
+        input#status(name="status", type="hidden" value="Pending")
+      .form-group.col-md-6
+        label(for="status") 
+        input#approvee(name="approvee", type="hidden" value="UFWardFO"  hidden)
+    .form-row
+      .form-group.col-md-12
+        label(for="availability") 
+        input#avail(name="availability", type="hidden" value="Available" hidden)
+
+script(src="/js/validatep.js")

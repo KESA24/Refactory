@@ -1,0 +1,44 @@
+
+/* Navigation bar styles */
+.navbar{
+    margin-top: 20px;
+}
+.navbar-brand img {
+    border-radius: 20px;
+}
+.navbar a{
+    color: #9a5802;
+    font-weight: 500;
+    font-weight: bolder;
+}
+.nav li a{
+    font-weight: 500px;
+    font-weight: bolder;
+    font-size: larger;  
+    color: #9a5802;
+}
+
+/* landingImage */
+.card{
+    position: absolute;
+    transform: translate (-50%,-50%);
+    display: flex;
+    margin-top: 40px; 
+    border: none;
+    max-width: 100%;  
+}
+
+.landimage img{
+    height: 400px;
+    width: 650px;
+    float: right;
+    border-radius:600px;
+    margin-left: 60px;
+    
+}
+.card-body{
+    margin-top: 20%;
+    font-size: larger;
+    font-weight: bolder;
+    color: #9a5802;
+}

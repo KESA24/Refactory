@@ -1,0 +1,49 @@
+meta(charset="UTF-8")
+meta(name="viewport", content="width=device-width,initial-scale=1")
+//-  Links to styling 
+script(src="https://kit.fontawesome.com/8af5379226.js", crossorigin="anonymous")
+link(rel="stylesheet", href="css/officials.css")
+link(rel="shortcut icon", href="/images/favicon.jpg", type="image/x-icon")
+script(src="https://kit.fontawesome.com/a076d05399.js")
+link(rel="stylesheet", href="css/bootstrap_css/bootstrap.css")
+title UFARM
+//-  Main Landing Page 
+#container-bg
+  header
+    nav.nav-container
+      ul
+        li
+          a.active(href) Home
+        li
+          a(href) About
+        li
+          a(href) Farm Wards
+        li
+          a(href='/signup') AOSignUp
+  .content-wrapper
+    h1 Masajja Urban Farming Initiative
+    p
+      | Urban Farming
+      br
+      | Produce Market
+      br
+      | Improved Livelihoods
+    button.btn.btn-warning#button Log In
+  .bg-login
+    .loginform
+      .close +
+      img(src="images/avatar.png", alt)
+      form(method="POST" action="/login")
+        input.cred(type="text", name="username" placeholder="Username", required)
+        input.cred(type="password", name="password" placeholder="Password", required)
+        button#button Submit
+  footer(style="margin-top:400px")
+    .bottom
+      center(style="color:black")
+        span.credit(style="color:black") Created By the Agritect|
+        span.far.fa-copyright(style="color:black")
+        |  2020 All rights reserved.
+script(src="js/officials.js")
+script(src="js/jquery-3.5.1.slim.min.js")
+script(src="js/popper.min.js")
+script(src="js/bootstrap_js/bootstrap.js")

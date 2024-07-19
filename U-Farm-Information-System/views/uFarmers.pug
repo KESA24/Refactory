@@ -1,0 +1,101 @@
+//- meta(charset="UTF-8")
+//- meta(name="viewport", content="width=device-width,initial-scale=1")
+//- title UrbanFarmers
+//- link(rel="stylesheet", href="/css/bootstrap_css/bootstrap.css")
+//- link(rel="stylesheet", href="/css/table.css")
+//- link(rel="shortcut icon" href="images/favicon.jpg" type="image/x-icon")
+//- script(src="https://kit.fontawesome.com/a076d05399.js")
+extends tablelayout
+block content
+    //- .row
+    nav#sidebarMenu.col-md-4.col-lg-2.d-md-block.bg-light.sidebar.collapse
+      .nav_bar
+        img.mobile_profile_image(src="/images/avatar.png", alt, style="margin-left: 20px; margin-top: 40px;")
+        h5(style="margin-left: 25px; margin-top: 20px;") Farmer One
+        i.fa.fa-bars.nav_btn
+      .sidebar-sticky.pt-2
+        ul.nav.flex-column
+          li.nav-item
+            a.nav-link(href="http://localhost:3000/ufarmer")
+              span(data-feather="file")
+              | Register UrbanFarmer
+
+          li.nav-item
+            a.nav-link(href="http://localhost:3000/uFarmers")
+              span(data-feather="file")
+              |View UrbanFarmers
+
+          li.nav-item
+            a.nav-link(href="http://localhost:3000/producelistFO")
+              span(data-feather="file")
+              |Uploaded Produce
+
+            a.nav-link(href="http://localhost:3000/bookings")
+              span(data-feather="users")
+              | Bookings and Orders
+
+          li.nav-item
+            a.nav-link(href="http://localhost:3000/ufarm")
+              span(data-feather="shopping-cart")
+              | Ufarm OnlineMarket
+
+          li.nav-item
+            a.nav-link(href="#")
+              span(data-feather="bar-chart-2")
+              | Reports
+    main.col-md-9.ml-sm-auto.col-lg-10.px-md-4(role="main")
+        .d-flex.justify-content-between.flex-wrap.flex-md-nowrap.align-items-center.pt-3.pb-2.mb-3.border-bottom
+            .container.mt-3
+                header
+                    h1.h2 Registered UrbanFarmers 
+                //- hr 
+        //- form.search( action='/ufarmers')
+        //-     .form-row
+        //-         .form-group.col-md-6
+        //-             input.form-control(name='gender' placeholder="Enter your search term(gender) ...")
+        //-         .form-group.col-md-2
+        //-             input.btn.btn-dark.btn-block(type="submit")  
+        .table-responsive
+            table.content-table.table-bordered                      
+                thead
+                    tr
+                        th FarmerFullname
+                        th DateofBirth
+                        th Gender
+                        th DateofRegistration
+                        th NationalIdNumber
+                        th PhoneContact
+                        th WardName
+                        th UfarmID
+                        th FarmActivities
+                        th Delete
+                        th UpdateDetails
+                        th CreateAccount
+                    tbody
+                            if users.length
+                            each user in users
+                                tr
+                                    td #{user.ufnames}
+                                    td #{user.ufdob}
+                                    td #{user.gender}
+                                    td #{user.ufdor}
+                                    td #{user.ufnin}
+                                    td #{user.ufphone}
+                                    td #{user.ufward}
+                                    td #{user.ufid}
+                                    td #{user.ufacts}
+                                    
+                                    td
+                                        form(method="post" action='/deleteufarmer')
+                                            input(type="hidden", placeholder="", name="id", value=user._id)
+                                            button.btn.btn-success.btn-sm(type="submit") Delete
+                                    td
+                                        form(method="GET" action= '/updateufarmer/'+user._id)
+                                            input(type="hidden", placeholder="", name="id", value=user._id)
+                                            button.btn.btn-sm.btn-success(type="submit") Update
+                                    td
+                                        form(method="GET" action= '/signup/'+user._id)
+                                            input(type="hidden", placeholder="", name="id", value=user._id)
+                                            button.btn.btn-sm.btn-success(type="submit") CreateAccount
+                            else
+                                p No registrations yet :(  

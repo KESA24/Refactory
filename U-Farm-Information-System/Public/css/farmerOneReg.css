@@ -1,0 +1,94 @@
+
+html{
+	font-family: Montserrat;
+}
+}
+body{
+	background-image: url(/Public/images/background\ \(4\).jpg);
+
+}
+
+/* Form Container */
+.container{
+	width: 80%;
+	margin: 0 auto;
+	height: 600px;
+}
+
+
+/* Style the form */
+#regForm {
+	background-color: burlywood;
+	margin: 20px auto;
+	padding: 20px;
+	width: 100%;
+	min-width: 300px;
+	opacity: 0.9;
+	
+  }
+  h1{
+	  margin-left: 100px;
+	  
+  }
+
+  fieldset{
+	  width: 800px;
+	  border: 2px solid bisque;
+	  margin: 0 auto;
+
+  }
+  
+  /* Style the input fields */
+  input {
+	padding: 10px;
+	width: 90%;
+	font-size: 17px;
+	font-family: Raleway;
+	border: 1px solid #aaaaaa;
+  }
+  
+  /* Mark input boxes that gets an error on validation: */
+  input.invalid {
+	background-color: #ffdddd;
+  }
+  
+  /* Hide all steps by default: */
+  .tab {
+	display: none;
+  }
+  
+  /* Make circles that indicate the steps of the form: */
+  .step {
+	height: 15px;
+	width: 15px;
+	margin: 0 2px;
+	background-color: black;
+	border: none;
+	border-radius: 50%;
+	display: inline-block;
+	opacity: 0.5;
+  }
+  
+  /* Mark the active step: */
+  .step.active {
+	opacity: 1;
+  }
+  
+  /* Mark the steps that are finished and valid: */
+  .step.finish {
+	background-color: #4CAF50;
+  }
+
+  button{
+	  width: 150px;
+	  height: 40px;
+	  margin-top: 4px;
+	  border-radius: 5px;
+	  cursor: pointer;
+	  background-color: blanchedalmond;
+  }
+
+   
+  
+  
+
